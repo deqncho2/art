@@ -95,8 +95,7 @@ class DeepFool(Attack):
                 fk_i_hat = np.argmax(f)
 
                 # Stop if misclassification has been achieved
-                if fk_i_hat != fk_hat:
-                    break
+                
 
             # Apply overshoot parameter
             x_adv[j] = np.clip(x[j] + (1 + self.epsilon) * (xj[0] - x[j]), clip_min, clip_max)
