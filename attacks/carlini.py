@@ -228,6 +228,8 @@ class CarliniL2Method(Attack):
 
         for j, (ex, target) in enumerate(zip(x_adv, y)):        
             logger.debug('Processing sample %i out of %i', j, x_adv.shape[0])
+            print('Processing sample %i out of %i', j, x_adv.shape[0])
+
             image = ex.copy()
 
             # The optimization is performed in tanh space to keep the
