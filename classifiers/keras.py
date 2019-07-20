@@ -58,7 +58,9 @@ class KerasClassifier(Classifier):
             self._output = model.outputs[output_layer]
         else:
             self._output = model.output
-
+        
+        print(self._output)
+        print(k.int_shape(self.output))
         _, self._nb_classes = k.int_shape(self._output)
         self._input_shape = k.int_shape(self._input)[1:]
         self._custom_activation = custom_activation
